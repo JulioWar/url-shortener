@@ -15,4 +15,4 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::geT('top.json', [SiteVisitController::class, 'mostPopular']);
+Route::get('top.json', [SiteVisitController::class, 'mostPopular']);
