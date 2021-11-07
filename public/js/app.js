@@ -5393,8 +5393,6 @@ document.addEventListener("alpine:init", function () {
           if (error.errors) {
             _this.errors = error.errors;
           }
-
-          console.log(_this.errorMessage, error);
         })["finally"](function () {
           _this.processing = false;
         });

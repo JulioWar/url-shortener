@@ -46,7 +46,6 @@ document.addEventListener("alpine:init", () => {
                 if (error.errors) {
                     this.errors = error.errors;
                 }
-                console.log(this.errorMessage, error)
             })
             .finally(() => {
                 this.processing = false;

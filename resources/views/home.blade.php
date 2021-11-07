@@ -70,11 +70,13 @@
             <div class="mt-10">
                 <template x-for="item in urls" :key="item.site_url">
                     <div class="flex item-start py-5 border-dashed border-b border-white border-opacity-25 ">
-                        <div class="flex-1 font-bold text-sm">
-                            <a x-bind:href="item.site_url" x-text="item.site_url"></a>
-                            <p class="text-gray-500  mt-2" x-text="item.last_visit"></p>
+                        <div class="flex-2 font-bold text-sm">
+                            <a x-bind:href="item.site_url" class="break-all" x-text="item.site_url"></a>
+                            <p class="text-gray-500 mt-2" >
+                                Visited <span x-text="item.last_visit"></span>
+                            </p>
                         </div>
-                        <div class="flex-1 text-right">
+                        <div class="flex-1 text-right pl-5">
                             <p class="text-lg font-bold" x-text="item.visits"></p>
                         </div>
                     </div>
