@@ -4,6 +4,7 @@ namespace App\Providers;
 
 use App\Contracts\SiteVisitRepositoryContract;
 use App\Repositories\SiteVisitRepository;
+use App\Services\AliasGenerator;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -15,7 +16,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->bind(SiteVisitRepositoryContract::class, SiteVisitRepository::class);
+        $this->app->singleton(SiteVisitRepositoryContract::class, SiteVisitRepository::class);
+        $this->app->singleton(AliasGeneratorContract::class, AliasGenerator::class);
     }
 
     /**
