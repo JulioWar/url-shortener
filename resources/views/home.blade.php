@@ -4,7 +4,7 @@
     <div class="flex two-columns-layout flex-col lg:flex-row" >
         <div class="lg:flex-1 flex-initial px-5 md:pl-10 lg:pl-32 pt-16 pb-5 first-column" x-data="shorturl_generator">
             <h1 readonly="Logo" class="mb-5">
-                <img src="{{ asset('img/logo.svg') }}" alt="Site Logo - Short URL"/>
+                <img class="logo" src="{{ asset('img/logo.svg') }}" alt="Site Logo - Short URL"/>
             </h1>
 
             <h2 class="font-bold mb-5 mt-10 text-xl">Enter a long URL to make it shorter.</h2>
