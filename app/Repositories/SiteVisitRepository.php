@@ -32,7 +32,7 @@ class SiteVisitRepository implements SiteVisitRepositoryContract {
             $newVisit->visit_count = 0;
         }
 
-        $newVisit->visit_count += $newVisit->visit_count + 1;
+        $newVisit->visit_count = $newVisit->visit_count + 1;
         $newVisit->save();
 
         return $this->format($newVisit);
