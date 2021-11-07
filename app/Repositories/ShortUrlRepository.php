@@ -15,6 +15,10 @@ class ShortUrlRepository implements ShortUrlRepositoryContract {
         $this->_aliasGenerator = $aliasGenerator;
     }
 
+    private function aliasExist(string $alias): bool {
+        return ShortUrl::alias($alias)->count() > 0;
+    }
+
     public function create(string $url): array {
         $alias = $this->_aliasGenerator->generate();
 
@@ -29,7 +33,9 @@ class ShortUrlRepository implements ShortUrlRepositoryContract {
         ])->toArray();
     }
 
-    private function aliasExist(string $alias): bool {
-        return ShortUrl::alias($alias)->count() > 0;
+    public function findByAlias(string $alias) {
+        $shortUrl = ShortUrl::alias($alias)->first();
+        return is_null($shortUrl) ? $shortUrl : $shortUrl->toArray();
     }
+
 }

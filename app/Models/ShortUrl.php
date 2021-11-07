@@ -9,6 +9,10 @@ class ShortUrl extends Model
 {
     use HasFactory;
 
+    public $hidden = [
+        'id'
+    ];
+
     public $fillable = [
         'alias',
         'original_url'
