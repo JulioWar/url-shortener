@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="176" height="47" viewBox="0 0 176 47">
+  <g id="Group_2" data-name="Group 2" transform="translate(-140 -132)">
+    <g id="Rectangle_6" data-name="Rectangle 6" transform="translate(238 132)" fill="none" stroke="#000" stroke-width="2">
+      <rect width="78" height="47" stroke="none"/>
+      <rect x="1" y="1" width="76" height="45" fill="none"/>
+    </g>
+    <rect id="Rectangle_5" data-name="Rectangle 5" width="99" height="47" transform="translate(140 132)"/>
+    <text id="Short_URL" data-name="Short   URL" transform="translate(151 165)" fill="#fff" font-size="26" font-family="Montserrat-Bold, Montserrat" font-weight="700"><tspan x="0" y="0">Short</tspan><tspan y="0" xml:space="preserve" fill="#707070">   </tspan><tspan y="0" fill="#000">URL</tspan></text>
+  </g>
+</svg>

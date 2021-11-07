@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    font-family: Montserrat, Arial, sans-serif;
+}
+
+.border-radius-none {
+    border-radius: 0 !important;
+}
+
+
+body {
+    min-height: 100vh;
+    background: white;
+}
+
+.two-columns-layout {
+    min-height: 100vh;
+}
