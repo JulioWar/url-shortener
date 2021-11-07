@@ -18,7 +18,8 @@ class ShortUrlController extends Controller
     public function store(ShortUrlBaseRequest $request) {
         return response()->json(
             $this->_shortUrlRepository->create(
-                $request->get('url')
+                $request->get('url'),
+                $request->get('nsfw', false)
             )
         );
     }

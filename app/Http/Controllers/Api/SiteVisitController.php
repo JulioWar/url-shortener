@@ -32,6 +32,10 @@ class SiteVisitController extends Controller
 
         $this->_siteVisitRepository->registerVisit($shortUrl['original_url']);
 
+        if (boolval($shortUrl['is_nsfw'])) {
+            return view('redirect', ['url' => $shortUrl['original_url']]);
+        }
+
         return redirect()->to($shortUrl['original_url']);
     }
 

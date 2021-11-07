@@ -15,7 +15,8 @@ class ShortUrl extends Model
 
     public $fillable = [
         'alias',
-        'original_url'
+        'original_url',
+        'is_nsfw'
     ];
 
     public function scopeAlias($query, string $alias) {

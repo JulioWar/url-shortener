@@ -7,6 +7,7 @@ window.Alpine = Alpine
 document.addEventListener("alpine:init", () => {
     Alpine.data('shorturl_generator', () => ({
         url: '',
+        nsfw: false,
         showError: false,
         errorMessage: '',
         errors: [],
@@ -30,12 +31,17 @@ document.addEventListener("alpine:init", () => {
             this.urlCreated = false;
             this.shortUrl = '';
 
-            axios.post('/api/url.json', { url: this.url})
+            axios.post('/api/url.json', {
+                url: this.url,
+                nsfw: this.nsfw
+            })
             .then((res) => {
                 this.urlCreated = true;
                 this.lastUrl = this.url;
                 this.shortUrl = window.origin + '/' + res.data.alias;
                 this.$dispatch('new-url');
+                this.url = '';
+                this.nsfw = false;
             })
             .catch((res) => {
                 const error = res.response.data;

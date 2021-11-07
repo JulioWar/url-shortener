@@ -19,7 +19,7 @@ class ShortUrlRepository implements ShortUrlRepositoryContract {
         return ShortUrl::alias($alias)->count() > 0;
     }
 
-    public function create(string $url): array {
+    public function create(string $url,  bool $nsfw = false): array {
         $alias = $this->_aliasGenerator->generate();
 
         // Adding this to avoid collisions (in case an alias that already exist is generated).
@@ -29,7 +29,8 @@ class ShortUrlRepository implements ShortUrlRepositoryContract {
 
         return ShortUrl::create([
             'alias' => $alias,
-            'original_url' => $url
+            'original_url' => $url,
+            'is_nsfw' => $nsfw
         ])->toArray();
     }
 
