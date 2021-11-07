@@ -1,0 +1,1 @@
+window.onload=function(){if(REDIRECT_URL){var n=10,e=document.getElementById("counter"),t=function(){e.innerHTML=n+" seconds remaining to be redirected..."};t();var o=setInterval((function(){if(0==n)return location.href=REDIRECT_URL,void clearInterval(o);n--,t()}),1e3)}};
