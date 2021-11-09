@@ -15,6 +15,13 @@ class ShortUrlController extends Controller
         $this->_shortUrlRepository = $shortUrlRepository;
     }
 
+    /**
+     * Method associated with the endpoint [/url.json]
+     * Returns the new short url created
+     *
+     * @param ShortUrlBaseRequest $request
+     * @return void
+     */
     public function store(ShortUrlBaseRequest $request) {
         return response()->json(
             $this->_shortUrlRepository->create(

@@ -20,11 +20,26 @@ class SiteVisitController extends Controller
         $this->_siteVisitRepository = $siteVisitRepository;
         $this->_shortUrlRepository = $shortUrlRepository;
     }
-
+    /**
+     * Method associated with the endpoint [/top.json]
+     * Returns the top 100 most visited sites
+     *
+     * @param ShortUrlBaseRequest $request
+     * @return void
+     */
     public function mostPopular() {
         return response()->json($this->_siteVisitRepository->getMostPopular());
     }
 
+    /**
+     * Redirects user to the origin url based on its alias
+     *
+     * Should abort with the http code 404 when alias is not found.
+     * Should return a view in case the content was flagged as not safe for work
+     *
+     * @param string $alias
+     * @return void
+     */
     public function redirectToSite(string $alias) {
         $shortUrl = $this->_shortUrlRepository->findByAlias($alias);
 

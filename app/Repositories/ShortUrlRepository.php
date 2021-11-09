@@ -5,7 +5,6 @@ namespace App\Repositories;
 use App\Contracts\AliasGeneratorContract;
 use App\Contracts\ShortUrlRepositoryContract;
 use App\Models\ShortUrl;
-use Illuminate\Support\Facades\Log;
 
 class ShortUrlRepository implements ShortUrlRepositoryContract {
 
