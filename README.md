@@ -51,12 +51,12 @@ php artisan migrate
 ## API Routes
 Endpoint to return top 100 most frequently accessed URLs
 ```
-/top.json
+/api/top.json
 ```
 
 Endpoint to create a new short url 
 ```
-/url.json
+/api/url.json
 ```
 
 Route to redirect the user to the original url based on its alias.
