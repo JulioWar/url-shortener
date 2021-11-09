@@ -1,5 +1,7 @@
 # Short URLs
 
+![image](https://user-images.githubusercontent.com/6256473/140857513-cba8a7f6-1ba6-47e3-9aff-5e42f7f8620e.png)
+
 ## Installation
 ### Requirements
 - Have Docker installed and running
